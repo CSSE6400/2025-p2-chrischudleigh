@@ -6,6 +6,9 @@ GET {{baseUrl}}/api/v1/health
 ### List All Todos
 GET {{baseUrl}}/api/v1/todos
 
+### List All Todos in window
+GET {{baseUrl}}/api/v1/todos?completed=false&window=3
+
 ### Get a specific Todo
 GET {{baseUrl}}/api/v1/todos/1
 
@@ -16,7 +19,8 @@ Content-Type: application/json
 {
     "title": "Test Todo",
     "description": "This is a test todo",
-    "completed": false
+    "completed": false,
+    "deadline_at": "2025-03-10T00:00:00"
 }
 
 ### Update a Todo
